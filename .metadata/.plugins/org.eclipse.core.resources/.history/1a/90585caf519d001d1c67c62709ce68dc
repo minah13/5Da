@@ -1,0 +1,42 @@
+# DataBase Settings
+spring.datasource.type=org.apache.tomcat.jdbc.pool.DataSource
+spring.datasource.url=jdbc:mysql://localhost:3306/diary?autoReconnect=true&useUnicode=true&characterEncoding=utf-8
+spring.datasource.username=diaryadmin
+spring.datasource.password=dlalsdk13
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+
+# JPA Settings
+spring.jpa.hibernate.ddl-auto=none
+	# create : 테이블이 없을 경우 테이블 생성
+	# create-drop : 테스트 실행시 mock Data를 위해 table을 생성하고 테스트 종료 후 테이블 drop
+	# validate : application 실행시 @Entity들과 이미 존재하는 테이블이 정상적으로 매핑되었는지 판단하여 제대로 매핑되지 않았다면 application을 실행하지 않는다.
+	# update : 이미 테이블이 존재하는 상황에서 @Entity에 속성이 추가될 경우, 기존 테이블의 데이터에는 변화없이 새로운 column을 추가한다.
+	# none : 아무것도 하지 않는다.
+
+spring.jpa.generate-ddl=false
+	# DDL 생성 시 데이터베이스 고유의 기능을 사용하는지에 대한 유무
+spring.jpa.show-sql=true
+	# jpa나 hibernate를 통해 CRUD를 실행하면 해당 CRUD의 sql을 로깅으로 보여준다.
+spring.jpa.database=mysql
+	# 사용하는 데이터베이스를 지정한다.
+spring.jpa.database-platform=org.hibernate.dialect.MySQL5InnoDBDialect
+	# Spring Data JPA는 기본적으로 Hibernate라는 JPA 구현체를 사용한다.
+	# Hibernate는 내부적으로 지정되는 DB에 맞게 SQL 문을 생성하는 Dialect가 존재한다.
+	# Dialect는 Hibernate가 다양한 데이터베이스를 처리하기 위해 각 데이터베이스에 맞는 SQL 문법을 처리하기 위해 존재한다.
+	# MySQL5Dialect, MySQL5InnoDBDialect, Oracle10gDialect, OracleDialect 등 다양한 Dialect가 있다.
+	# 명시적으로 지정하지 않는다면 MyISAM으로 지정되는데 데이터 불결성을 체크하는 InnoDB를 더 권장한다.
+spring.jpa.properties.hibernate.format_sql=true
+	# 로깅에 표시되는 SQL을 보기좋게 표시해준다.
+
+# hibernate logging (로깅 레벨 설정)
+logging.level.org.hibernate=info
+
+
+# jsp 설정
+spring.mvc.view.prefix : /WEB-INF/views/
+spring.mvc.view.suffix : .jsp
+
+# JSP 수정시 서버 재시작없이 바로 적용될 수 있도록!
+server.servlet.jsp.init-parameters.development=true
+
