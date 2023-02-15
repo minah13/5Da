@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+html,body{
+	height:100%;
+}
+
+body{
+	background-color : #FEC7C2;
+}
+
+#homeContext{
+	width : 80%;
+	height : 80%;
+	background-color : white;
+	text-align : center;
+	margin : 0 auto;
+	padding-top: 30px;
+	padding-bottom : 30px;
+}
+
+#kakaoLoginBtn{
+	background-color : yellow;
+	border : none;
+}
+
+#naverLoginBtn{
+	background-color : green;
+	border : none;
+}
+
+#googleLoginBtn{
+	background-color : white;
+	border : 1px solid black;
+}
+
+#emailLoginBtn{
+	background-color : gray;
+	border : none;
+}
+
+.loginBtn{
+	width : 300px;
+	height : 50px;
+	margin-top : 15px;
+	margin-bottom : 15px;
+}
